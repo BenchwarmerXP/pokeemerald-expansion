@@ -76,12 +76,24 @@ struct TrainerMonNoItemCustomMoves
 };
 
 struct TrainerMonItemCustomMoves
+struct TrainerMon
 {
     u16 iv;
+    u8 nickname[POKEMON_NAME_LENGTH + 1];
+    u8 ivs[NUM_STATS];
+    u8 evs[NUM_STATS];
     u8 lvl;
     u16 species;
     u16 heldItem;
     u16 moves[MAX_MON_MOVES];
+    u8 ball;
+    u16 ability:2;
+    u16 friendship:2;
+    u16 gender:2;
+    u16 build:3;
+    u16 shiny:1;
+    u16 nature:5;
+    u16 unused:1;
 };
 
 #define NO_ITEM_DEFAULT_MOVES(party) { .NoItemDefaultMoves = party }, .partySize = ARRAY_COUNT(party), .partyFlags = 0
@@ -92,25 +104,22 @@ struct TrainerMonItemCustomMoves
 
 union TrainerMonPtr
 {
-    const struct TrainerMonNoItemDefaultMoves *NoItemDefaultMoves;
-    const struct TrainerMonNoItemCustomMoves *NoItemCustomMoves;
-    const struct TrainerMonItemDefaultMoves *ItemDefaultMoves;
-    const struct TrainerMonItemCustomMoves *ItemCustomMoves;
-    const struct TrainerMonCustomized *EverythingCustomized;
+    const struct TrainerMon *TrainerMon;
 };
+
 
 struct Trainer
 {
-    /*0x00*/ u32 aiFlags;
-    /*0x04*/ union TrainerMonPtr party;
-    /*0x08*/ u16 items[MAX_TRAINER_ITEMS];
-    /*0x10*/ u8 trainerClass;
-    /*0x11*/ u8 encounterMusic_gender; // last bit is gender
-    /*0x12*/ u8 trainerPic;
-    /*0x13*/ u8 trainerName[TRAINER_NAME_LENGTH + 1];
-    /*0x1E*/ bool8 doubleBattle:1;
-             u8 partyFlags:7;
-    /*0x1F*/ u8 partySize;
+    u8 partyFlags; // Unread
+    u8 trainerClass;
+    u8 encounterMusic_gender; // last bit is gender
+    u8 trainerPic;
+    u8 trainerName[12];
+    u16 items[4];
+    bool8 doubleBattle;
+    u32 aiFlags;
+    u8 partySize;
+    union TrainerMonPtr party;
 };
 
 #define TRAINER_ENCOUNTER_MUSIC(trainer)((gTrainers[trainer].encounterMusic_gender & 0x7F))
