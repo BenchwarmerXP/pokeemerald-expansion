@@ -3260,23 +3260,57 @@ static const struct TrainerMon sParty_Roxanne1[] = {
 static const struct TrainerMon sParty_Brawly1[] = {
     {
     .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
-    .lvl = 16,
-    .species = SPECIES_MACHOP,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_KARATE_CHOP, MOVE_LOW_KICK, MOVE_SEISMIC_TOSS, MOVE_BULK_UP}
+    .lvl = 22,
+    .species = SPECIES_HITMONTOP,
+    .ability = ABILITY_INTIMIDATE,
+    .heldItem = ITEM_METRONOME,
+    .nature = NATURE_HASTY,
+    .moves = {MOVE_RAPID_SPIN, MOVE_ROLLING_KICK, MOVE_TRIPLE_KICK, MOVE_BULK_UP}
     },
     {
     .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
-    .lvl = 16,
-    .species = SPECIES_MEDITITE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_FOCUS_PUNCH, MOVE_LIGHT_SCREEN, MOVE_REFLECT, MOVE_BULK_UP}
+    .lvl = 22,
+    .species = SPECIES_CROAGUNK,
+    .ability = ABILITY_POISON_TOUCH,
+    .heldItem = ITEM_BLACK_SLUDGE,
+    .nature = NATURE_BOLD,
+    .moves = {MOVE_POISON_STING, MOVE_REVENGE, MOVE_TAUNT, MOVE_BULK_UP}
+    },
+    {
+    .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
+    .lvl = 22,
+    .species = SPECIES_PANCHAM,
+    .ability = ABILITY_IRON_FIST,
+    .heldItem = ITEM_PUNCHING_GLOVE,
+    .nature = NATURE_HARDY,
+    .moves = {MOVE_ARM_THRUST, MOVE_COMET_PUNCH, MOVE_ME_FIRST, MOVE_BULK_UP}
+    },
+    {
+    .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
+    .lvl = 22,
+    .species = SPECIES_SCRAGGY,
+    .ability = ABILITY_SHED_SKIN,
+    .heldItem = ITEM_ROSELI_BERRY,
+    .nature = NATURE_JOLLY,
+    .moves = {MOVE_PAYBACK, MOVE_LOW_KICK, MOVE_HEADBUTT, MOVE_BULK_UP}
+    },
+    {
+    .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
+    .lvl = 22,
+    .species = SPECIES_CRABRAWLER,
+    .heldItem = ITEM_BINDING_BAND,
+    .ability = ABILITY_ANGER_POINT,
+    .nature = NATURE_TIMID,
+    .moves = {MOVE_BUBBLE_BEAM, MOVE_ROCK_SMASH, MOVE_BULK_UP, MOVE_CLAMP}
     },
     {
     .iv = TRAINER_PARTY_IVS(24, 24, 24, 24, 24, 24),
-    .lvl = 19,
-    .species = SPECIES_MAKUHITA,
+    .lvl = 24,
+    .species = SPECIES_HARIYAMA,
     .heldItem = ITEM_SITRUS_BERRY,
+    .ability = ABILITY_THICK_FAT,
+    .ball = BALL_HEAVY,
+    .nature = NATURE_ADAMANT,
     .moves = {MOVE_ARM_THRUST, MOVE_VITAL_THROW, MOVE_REVERSAL, MOVE_BULK_UP}
     }
 };
@@ -4058,6 +4092,7 @@ static const struct TrainerMon sParty_Calvin1[] = {
     {
     .lvl = 7,
     .species = SPECIES_BIDOOF,
+    .ball = BALL_FRIEND,
     }
 };
 
