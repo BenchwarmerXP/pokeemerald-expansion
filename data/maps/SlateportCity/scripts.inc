@@ -161,7 +161,7 @@ SlateportCity_Pokemart_EnergyGuru:
 	.2byte ITEM_MOON_STONE
 	.2byte ITEM_LEAF_STONE
 	.2byte ITEM_ICE_STONE
-	.2byte ITEM_OVAL_STONEs
+	.2byte ITEM_OVAL_STONE
 	.2byte ITEM_NONE
 	release
 	end

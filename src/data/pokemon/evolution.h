@@ -112,8 +112,8 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_EEVEE]                 = {{EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_JOLTEON},
                                        {EVO_ITEM, ITEM_WATER_STONE, SPECIES_VAPOREON},
                                        {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_FLAREON},
-                                       {EVO_FRIENDSHIP_DAY, 0, SPECIES_ESPEON},
-                                       {EVO_FRIENDSHIP_NIGHT, 0, SPECIES_UMBREON},
+                                       {EVO_ITEM, ITEM_SUN_STONE, SPECIES_ESPEON},
+                                       {EVO_ITEM, ITEM_MOON_STONE, SPECIES_UMBREON},
                                     #if P_GEN_4_POKEMON == TRUE
                                        {EVO_SPECIFIC_MAP, MAP_PETALBURG_WOODS, SPECIES_LEAFEON},
                                        {EVO_ITEM, ITEM_LEAF_STONE, SPECIES_LEAFEON},
@@ -228,6 +228,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_BARBOACH]              = {{EVO_LEVEL, 30, SPECIES_WHISCASH}},
     [SPECIES_CORPHISH]              = {{EVO_LEVEL, 30, SPECIES_CRAWDAUNT}},
     [SPECIES_FEEBAS]                = {{EVO_BEAUTY, 170, SPECIES_MILOTIC},
+                                       {EVO_LEVEL, 20, SPECIES_MILOTIC},
                                        {EVO_TRADE_ITEM, ITEM_PRISM_SCALE, SPECIES_MILOTIC},
                                        {EVO_ITEM, ITEM_PRISM_SCALE, SPECIES_MILOTIC}},
     [SPECIES_CARVANHA]              = {{EVO_LEVEL, 30, SPECIES_SHARPEDO}},
