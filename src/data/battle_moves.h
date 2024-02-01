@@ -69,7 +69,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_MULTI_HIT,
         .power = 25,
-        .type = TYPE_NORMAL,
+        .type = TYPE_FLYING,
         .accuracy = 85,
         .pp = 15,
         .secondaryEffectChance = 0,
